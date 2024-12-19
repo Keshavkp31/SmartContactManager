@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is services page</h1>
+    <hr />
+    <!-- using fragment -->
+    <div class="parent-fragment" th:fragment="parent(content)">
+        <h1>This is parent fragment</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ad.</p>
+        <div th:replace="${content}"></div>
+      </div>
+      <div th:fragment="test(content)">
+        <div th:replace="${content}"></div>
+      </div>
+</body>
+
+</html>
