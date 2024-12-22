@@ -37,6 +37,11 @@ public class PageController {
         return "home";
     }
 
+    @GetMapping("/")
+    public String index() {
+        return "redirect:/home";
+    }
+
     @RequestMapping("/about")
     public String aboutPage(Model model) {
         model.addAttribute("isLogin", true);
